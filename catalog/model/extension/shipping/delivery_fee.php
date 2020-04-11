@@ -7,7 +7,7 @@ class ModelExtensionShippingDeliveryFee extends Model {
          * Query for finding if the customer is from the same zone as selected by the admin in the backend
          * @var [type]
          */
-        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "zone_to_geo_zone WHERE geo_zone_id = '" . (int) $this->config->get('delivery_fee_geo_zone_id') . "' AND country_id = '" . (int)$address['country_id'] . "' AND (zone_id = '" . (int) $address['zone_id'] . "' OR zone_id = '0')");
+        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "zone_to_geo_zone WHERE geo_zone_id = '" . (int) $this->config->get('shipping_delivery_fee_geo_zone_id') . "' AND country_id = '" . (int)$address['country_id'] . "' AND (zone_id = '" . (int) $address['zone_id'] . "' OR zone_id = '0')");
 
         if (!$this->config->get('shipping_delivery_fee_geo_zone_id')) {
             $status = true;
