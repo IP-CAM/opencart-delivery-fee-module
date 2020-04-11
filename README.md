@@ -1,4 +1,6 @@
 # OpenCart - Delivery Fee Module
+[![Release](https://img.shields.io/github/v/release/jstnmthw/opencart-delivery-fee-module)](https://img.shields.io/github/v/release/jstnmthw/opencart-delivery-fee-module)
+
 An OpenCart shipping module designed for calculating local delivery prices based on Google Maps API Distance Matrix.
 
 ## Installation
