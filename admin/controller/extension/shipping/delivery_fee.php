@@ -135,7 +135,8 @@ class ControllerExtensionShippingDeliveryFee extends Controller {
             return false;
         }
 
-        // Check Google API key's format is correct
+        // Check for basic address format only 
+        // (whitespace, digits, space, comma, period, hash only)
         if(preg_match('/[^\w\d\s\,.#]/', $this->request->post['shipping_delivery_fee_origin'])) {
             $this->error['origin'] = true;
         }
