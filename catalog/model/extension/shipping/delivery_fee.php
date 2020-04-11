@@ -35,6 +35,7 @@ class ModelExtensionShippingDeliveryFee extends Model {
             $distance = $data->rows[0]->elements[0]->distance->value;
             $ppk      = $this->config->get('shipping_delivery_fee_price_per_kilo');
             $cost     = round(($distance / 1000) * $ppk);
+            $rounded  = round($cost);
 
             // Inject css to hide manditory input.
             echo '<style>#collapse-shipping-method [name="shipping_method"] { display: none; } #collapse-shipping-method label { pointer-events: none; cursor: text; padding-left: 0; }  </style>';
